@@ -6,11 +6,13 @@ const ListComponent = ({ listComponent, onDelete, moveUp, index }) => {
     <li key={index}>
 
         <div className="listComponent">
-            <h3>
-                {listComponent.text} 
-                <FaTimes style={{cursor:'pointer'}} onClick = {() => onDelete(index)}/>
-                <TbArrowMoveUp style={{cursor:'pointer'}}  onClick = {() => moveUp(index)}/>
-            </h3>
+            <div className="wish-details">
+              <h3>
+                  {listComponent.text} 
+              </h3>
+              <FaTimes className='close_btn' style={{cursor:'pointer'}} onClick = {() => onDelete(index)}/>
+              <TbArrowMoveUp className='up_btn' style={{cursor:'pointer'}}  onClick = {() => moveUp(index)}/>
+            </div>
             <p>priority {listComponent.priority}</p>
         </div>
     </li>

@@ -112,8 +112,9 @@ const Wishlist = () => {
             </>}
             handleClose={togglePopup}
           />}
-        </div>
+          </div>
           <List list = {list} onDelete ={deleteComponent} onMove = {moveUp}/>
+          
         </div>
 
         

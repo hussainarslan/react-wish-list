@@ -4,7 +4,7 @@
 
 * {
   
-  color: #473C33;
+  /* color: #473C33; */
 }
  
 body {
@@ -13,11 +13,12 @@ body {
 
 .wishlist{
   margin: auto;
-  width: 50%;
+  width: 40%;
   background-color: #E4DCCF;
   border-radius: 10px;
   padding: 15px;
   margin-top: 20px;
+  color: #675D50;
 }
 
 .top {
@@ -33,12 +34,30 @@ h1 {
 ul {
   list-style-type: none;
   list-style: none;
+  
+  margin: auto;
+  padding: 0;
+  
 }
 
+.wish-details {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  flex: 1;
+}
+
+
 .listComponent {
-  background-color: #B5F1CC;
+
+  /* background-color: #B5F1CC; */
+  background-color: #675D50;
+  color: #E4DCCF;
   border-radius: 10px;
   font-family: 'Varela', sans-serif;
+  
   margin-bottom: 15px;
   padding: 10px;
 }
@@ -51,12 +70,19 @@ ul {
 }
 
 .material-symbols-outlined {
-  color: #473C33;
+  color: #675D50;
+  /* color: #E4DCCF; */
   font-weight: normal;
   font-style: normal;
   
 }
+.wish-details {
+  color: #E4DCCF;
+}
 
+.up_btn {
+  margin-left: 10px;
+}
 .material-symbols-outlined:hover{
   cursor: pointer;
   font-variation-settings:
@@ -69,46 +95,49 @@ ul {
 .popup-box {
   position: fixed;
   background: #00000050;
-  width: 100%;
-  height: 100vh;
-  top: -16px;
-  left: -8px;
- 
+  width: 80%;
+  margin: auto;
 }
 
  
 .box {
   font-family: 'Varela', sans-serif;
   position: fixed;
-  width: 25%;
-  margin: 0 auto;
-  height: auto;
-  max-height: 102vh;
+  width: 50%;
+  margin:  auto;
   /* margin-top: calc(100vh - 85vh - 20px); */
   background-color: #F9F5EB;
-  border-radius: 4px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 10px;
   border: 1px solid #999;
   overflow: auto;
-  height: 26rem;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-250%);
 
 }
 
 .box select {
   font-family: 'Varela', sans-serif;
-  margin-left: 30px;
+  margin: 5px;
   background-color: #E4DCCF;
   border-radius: 5px;
   text-align: center;
-  color: #473C33;
+  color: #675D50;
+  margin-left: 5%;
+  
 }
 
 .box input {
-  width: 200px;
+  width: 100px;
   height: 20px;
   background-color: #E4DCCF;
   border: 0;
   font-family: 'Varela', sans-serif;
+  margin: 5px;
+  flex: 1;
 }
 
 
@@ -116,11 +145,13 @@ ul {
   padding: 10px;
   font-family: 'Varela', sans-serif;
   font-size: 12px;
-  background-color: #473C33;
+  background-color: #675D50;
   color: #E4DCCF;
   font-weight: 700;
-  margin-left:30px ;
+  margin: 5px ;
   border-radius: 5px;
+  margin-left: 5%;
+  width: 50px;
 }
 
 body {
@@ -135,4 +166,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@media (max-width:1000px) {
+  .wishlist {
+    width: 80%;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .box-select {
+    margin-left: 2%;
+  }
+
+  .box-input {
+    margin: 5px;
+  }
+
+  .submit {
+    margin: 5px ;
+    margin-left: 2%;
+    padding: 5px;
+    text-align: center;
+  }
 }
